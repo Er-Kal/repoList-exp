@@ -20,8 +20,11 @@ function addRepo(index){ // function to add repo card
     cont.append(newRepo); 
     newRepo.classList.add("repoCard") 
     const repoTitle = document.createElement("h3");
-    repoTitle.innerHTML=`<a href=https://www.github.com/Er-Kal/${index.name}>${index.name}</a>`;
+    repoTitle.innerHTML=index.name;
     newRepo.append(repoTitle);
+    const repoLink = document.createElement("a");
+    repoLink.href = "https://www.github.com/Er-Kal/"+index.name;
+    newRepo.append(repoLink);
     const repoDesc = document.createElement("p");
     repoDesc.innerHTML = index.description;
     newRepo.append(repoDesc);
